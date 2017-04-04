@@ -1,6 +1,5 @@
 # Mojang-API-JS-CChallenges
 [![Status-Download](https://img.shields.io/badge/download-active-brightgreen.svg)](#download)
-[![Version-IJ](https://img.shields.io/badge/IDEA%20version%3A-2016.3-blue.svg)](#)
 <br>
 
 ## Introduction
@@ -29,3 +28,17 @@ estado(server);
 **-** `Api`<br>
 **-** `Textures`<br>
 **-** `Mojang`<br>
+
+
+![picture](https://i.imgur.com/1mIWzya.png)
+
+<br>
+
+## Download
+
+Click this -> [![Download](https://img.shields.io/badge/download-active-brightgreen.svg)](https://github.com/clonalejandro/Mojang-API-JS-CChallenges/archive/master.zip)
+
+
+
+## Copyright ©
+#### By clonalejandro | based on Material-UI (Plugin)
