@@ -21,55 +21,103 @@ function estado(servidor) {
     metodo.open("GET", "https://status.mojang.com/check", false);
     metodo.send();
 
-    if (servidor === "Web" | servidor === "Website" | servidor === "web" | servidor === "website"){
-        servidor = "minecraft.net";
-        est = JSON.parse(metodo.responseText)[0][servidor];
+    switch (servidor){
+
+        case "Web":
+        case "Website":
+        case "web":
+        case  "website":
+            servidor = "minecraft.net";
+            break;
+
+
+        case "Sessions":
+        case "Sesions":
+        case "Sesiones":
+        case "sessions":
+        case "sesions":
+        case "sesiones":
+            servidor = "session.minecraft.net";
+            break;
+
+
+        case "Accounts":
+        case "Account":
+        case "Cuentas":
+        case "account":
+        case "accounts":
+        case "cuentas":
+            servidor = "account.mojang.com";
+            break;
+
+
+        case "Auth":
+        case "Auths":
+        case "Login":
+        case "auth":
+        case "auths":
+        case "login":
+            servidor = "auth.mojang.com";
+            break;
+
+
+        case "Skin":
+        case "Skins":
+        case "skin":
+        case "skins":
+            servidor = "skins.minecraft.net";
+            break;
+
+
+        case "Auth Server":
+        case "Login Server":
+        case "AuthServer":
+        case "LoginServer":
+        case "auth server":
+        case "login server":
+        case "authserver":
+        case "loginserver":
+            servidor = "authserver.mojang.com";
+            break;
+
+        case "Session Server":
+        case "Sesion Server":
+        case "SessionServer":
+        case "SesionServer":
+        case "session server":
+        case "sesion server":
+        case "sessionserver":
+        case "sesionserver":
+            servidor = "sessionserver.mojang.com";
+            break;
+
+
+        case "API":
+        case "api":
+        case "Api":
+            servidor = "api.mojang.com";
+            break;
+
+
+        case "Textures":
+        case "Texture":
+        case "Texturas":
+        case "Textura":
+        case "textures":
+        case "texture":
+        case "texturas":
+        case "textura":
+            servidor = "textures.minecraft.net";
+            break;
+
+
+        case "Mojang":
+        case "mojang":
+            servidor = "mojang.com";
+            break;
     }
 
-    if (servidor === "Sessions" | servidor === "Sesions" | servidor === "Sesiones" | servidor === "sessions" | servidor === "sesions" | servidor === "sesiones"){
-        servidor = "session.minecraft.net";
-        est = JSON.parse(metodo.responseText)[0][servidor];
-    }
-
-    if (servidor === "Accounts" | servidor === "Account" | servidor === "Cuentas" | servidor === "account" | servidor === "accounts" | servidor === "cuentas"){
-        servidor = "account.mojang.com";
-        est = JSON.parse(metodo.responseText)[0][servidor];
-    }
-
-    if (servidor === "Auth" | servidor === "Auths" | servidor === "Login" | servidor === "auth" | servidor === "auths" | servidor === "login"){
-        servidor = "auth.mojang.com";
-        est = JSON.parse(metodo.responseText)[0][servidor];
-    }
-
-    if (servidor === "Skin" | servidor === "Skins" | servidor === "skin" | servidor === "skins"){
-        servidor = "skins.minecraft.net";
-        est = JSON.parse(metodo.responseText)[0][servidor];
-    }
-
-    if (servidor === "Auth Server" | servidor === "Login Server" | servidor === "AuthServer" | servidor === "LoginServer" | servidor === "auth server" | servidor === "login server" | servidor === "authserver" | servidor === "loginserver"){
-        servidor = "authserver.mojang.com";
-        est = JSON.parse(metodo.responseText)[0][servidor];
-    }
-
-    if (servidor === "Session Server" | servidor === "Sesion Server" | servidor === "SessionServer" | servidor === "SesionServer" | servidor === "session server" | servidor === "sesion server" | servidor === "sessionserver" | servidor === "sesionserver"){
-        servidor = "sessionserver.mojang.com";
-        est = JSON.parse(metodo.responseText)[0][servidor];
-    }
-
-    if (servidor === "API" | servidor === "api" | servidor === "Api"){
-        servidor = "api.mojang.com";
-        est = JSON.parse(metodo.responseText)[0][servidor];
-    }
-
-    if (servidor === "Textures" | servidor === "Texture" | servidor === "Texturas" | servidor === "Textura" | servidor === "textures" | servidor === "texture" | servidor === "texturas" | servidor === "textura"){
-        servidor = "textures.minecraft.net";
-        est = JSON.parse(metodo.responseText)[0][servidor];
-    }
-
-    if (servidor === "Mojang" | servidor === "mojang"){
-        servidor = "mojang.com";
-        est = JSON.parse(metodo.responseText)[0][servidor];
-    }
+    est = JSON.parse(metodo.responseText)[0][servidor];
 
     return est;
 }
