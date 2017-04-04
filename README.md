@@ -1,4 +1,6 @@
 # Mojang-API-JS-CChallenges
+[![Status-Download](https://img.shields.io/badge/download-active-brightgreen.svg)](#download)
+[![Version-IJ](https://img.shields.io/badge/IDEA%20version%3A-2016.3-blue.svg)](#)
 <br>
 
 ## Introduction
